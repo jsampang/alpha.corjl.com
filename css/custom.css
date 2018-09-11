@@ -1,0 +1,152 @@
+.customer-etsyid-header {
+  padding-left: 10px;
+  border-left: 1px solid #fff;
+  margin-left: 10px;
+}
+
+.mat-toolbar.mat-accent {
+  background: #1f3a4f;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  height: 64px;
+}
+
+.btn-name-img {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 7px;
+  color: #fff;
+  height: 100%;
+  width: 70px;
+  position: relative;
+}
+
+.btn-name-img:active,
+.btn-name-img:focus,
+.btn-name-img:hover {
+  color: #65d1c4 !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+}
+
+.btn-name-img .mat-icon {
+  margin-top: 6px;
+}
+
+.btn-name-img span:last-child {
+  line-height: 26px;
+}
+
+.btn-name-img .icon {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-name-img .new {
+  position: absolute;
+  font-size: 8px;
+  right: 31.5px;
+  top: 17.5px;
+  height: auto;
+}
+
+.btn-name-img:active img.hover-upload,
+.btn-name-img:active > img.hover-cart,
+.btn-name-img:focus img.hover-upload,
+.btn-name-img:focus > img.hover-cart,
+.btn-name-img:hover img.hover-upload,
+.btn-name-img:hover > img.hover-cart[_ngcontent-c1] {
+  display: block !important;
+}
+
+.btn-name-img img.hover-upload,
+.btn-name-img > img.hover-cart {
+  display: none;
+}
+
+.avatar > img {
+  height: 100%;
+  border-radius: 100%;
+}
+
+.avatar {
+  height: 45px;
+  width: 45px;
+}
+
+.user-header {
+  color: #fff;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.dropdown-toggle::after {
+  top: 5px;
+  position: relative;
+  color: #fff;
+}
+
+.dropdown-menu {
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.modal-content {
+    box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+}
+
+.modal-header {
+  background-color: #24527c;
+  color: #fff;
+}
+
+.modal-welcome-content {
+  padding: 50px 20px;
+  border: 1px solid #dcdcdc;
+  margin: 18px;
+}
+
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: 1px solid #fff;
+}
+
+.mat-primary {
+  background-color: #65d1c4;
+  color: #fff;
+}
+
+.mat-primary:hover {
+  background-color: #56bdb1;
+  color: #fff;
+}
