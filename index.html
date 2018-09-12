@@ -31,7 +31,6 @@
       </span>
     </div>
 
-    
     <div class="d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <ul class="navbar-nav ml-auto ml-md-0">
         <li>
@@ -40,32 +39,32 @@
             <span class="ng-tns-c1-0">Support</span>
           </button>
         </li>
-        
+
         <li>
           <button class="btn-name-img" type="button">
-          <span class="icon far fa-file"></span>
-          <span class="new fa fa-plus"></span>
-          <span class="ng-tns-c1-0">New</span>
-        </button>
+            <span class="icon far fa-file"></span>
+            <span class="new fa fa-plus"></span>
+            <span class="ng-tns-c1-0">New</span>
+          </button>
         </li>
-        
+
         <li>
           <button class="btn-name-img" type="button">
-          <span class="icon far fa-folder-open"></span>
-          <span class="ng-tns-c1-0">Open</span>
-        </button>
+            <span class="icon far fa-folder-open"></span>
+            <span class="ng-tns-c1-0">Open</span>
+          </button>
         </li>
-        
+
         <li>
           <button class="btn-name-img" type="button">
-          <img class="icon" src="https://alpha.corjl.com/cdn/images/icon/189871/cart.png">
-          <img class="icon hover-cart" src="https://alpha.corjl.com/cdn/images/icon/c66193/cart-hover.png">
-          <span class="ng-tns-c1-0">Orders</span>
-        </button>
+            <img class="icon" src="https://alpha.corjl.com/cdn/images/icon/189871/cart.png">
+            <img class="icon hover-cart" src="https://alpha.corjl.com/cdn/images/icon/c66193/cart-hover.png">
+            <span class="ng-tns-c1-0">Orders</span>
+          </button>
         </li>
       </ul>
     </div>
-    
+
     <div class="d-md-inline-block form-inline ">
       <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown no-arrow d-inline-block">
@@ -77,12 +76,12 @@
           </a>
 
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#">Design Settings</a>
-            <a class="dropdown-item" href="#">Account Settings</a>
-            <a class="dropdown-item" href="#">Billing Settings</a>
-            <a class="dropdown-item" href="#">Billing History</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#design-settings">Design Settings</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#account-settings">Account Settings</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#billing-settings">Billing Settings</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#billing-history">Billing History</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logout">Logout</a>
           </div>
         </li>
       </ul>
@@ -95,7 +94,7 @@
   </div>
 
   <!-- Modal Logout-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -104,29 +103,561 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body modal-welcome-content">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body modal-welcome-content">
+          <h6 class="text-center">Select "Logout" below if you are ready to end your current session.</h6>
+        </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn mat-primary" href="#">Logout</a>
+          <a class="btn mat-primary" href="https://www.corjl.com/designer/login">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Billing History -->
+  <div class="modal fade" id="billing-history" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Billing History</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <div class="modal-body modal-welcome-content">
+          <div class="content-dialog">
+            <div class="box-border center-two-title">
+              <h4>Balance: $0.00 USD</h4>
+              <h4>Next Payment: Sep 17, 2018</h4>
+            </div>
+            <div>
+              <div class="p-datatable sortfield" tablestyleclass="theme1-table-prime vertical-align-top custom-thead no-padding-expand">
+                <div class="ui-datatable ui-widget">
+                  <div class="ui-datatable-tablewrapper ng-star-inserted" style="">
+                    <table class="theme1-table-prime vertical-align-top custom-thead no-padding-expand">
+                      <thead class="ui-datatable-thead">
+                        <tr class="ui-state-default ng-star-inserted">
+                          <th class="ui-state-default ui-unselectable-text ui-sortable-column ui-state-active ng-star-inserted" tabindex="1" scope="col">
+                            <span class="ui-column-title ng-star-inserted">Payment Date</span>
+                            <span class="ui-sortable-column-icon fa fa-fw fa-sort fa-sort-desc ng-star-inserted"></span>
+                          </th>
+                          <th class="ui-state-default ui-unselectable-text ui-sortable-column ng-star-inserted" tabindex="1" scope="col">
+                            <span class="ui-column-title ng-star-inserted">Amount</span>
+                            <span class="ui-sortable-column-icon fa fa-fw fa-sort ng-star-inserted"></span>
+                          </th>
+                          <th class="ui-state-default ui-unselectable-text ui-sortable-column ng-star-inserted" tabindex="1" scope="col">
+                            <span class="ui-column-title ng-star-inserted">Payment Method</span>
+                            <span class="ui-sortable-column-icon fa fa-fw fa-sort ng-star-inserted"></span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="ui-datatable-data ui-widget-content">
+                        <tr class="ui-widget-content ui-datatable-emptymessage-row ng-star-inserted" style="visibility: visible;">
+                          <td class="ui-datatable-emptymessage" colspan="3">
+                            <span class="ng-star-inserted">No records found</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <p-paginator styleclass="ui-paginator-bottom" class="ng-star-inserted" style="">
+                    <div class="ui-paginator-bottom ui-paginator ui-widget ui-widget-header ui-unselectable-text ui-helper-clearfix ng-star-inserted">
+                      <a class="ui-paginator-first ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                        <span class="fa fa-step-backward"></span>
+                      </a>
+                      <a class="ui-paginator-prev ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                        <span class="fa fa-backward"></span>
+                      </a>
+                      <span class="ui-paginator-pages">
+                        <a class="ui-paginator-page ui-paginator-element ui-state-default ui-corner-all ui-state-active ng-star-inserted" href="#">1</a>
+                      </span>
+                      <a class="ui-paginator-next ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                        <span class="fa fa-forward"></span>
+                      </a>
+                      <a class="ui-paginator-last ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                        <span class="fa fa-step-forward"></span>
+                      </a>
+                    </div>
+                  </p-paginator>
+
+                  <div class="ui-column-resizer-helper ui-state-highlight" style="display:none"></div>
+                  <span class="fa fa-arrow-down ui-datatable-reorder-indicator-up" style="position: absolute; display: none;"></span>
+                  <span class="fa fa-arrow-up ui-datatable-reorder-indicator-down" style="position: absolute; display: none;"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Billing Settings -->
+  <div class="modal fade" id="billing-settings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Billing Settings</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="content-dialog">
+            <div class="ng-star-inserted" style="">
+              <form novalidate="" class="ng-pristine ng-invalid ng-touched">
+                <h3 class="title-content-modal">Current Credit Card</h3>
+
+                <div class="current-credit-card-name">
+                  <span class="ng-star-inserted" style="">Heather M Campbell, ***************1290</span>
+                </div>
+
+                <h3 class="title-content-modal">Change Credit Card</h3>
+                <div class="box-border">
+
+                  <div class="group-input">
+                    <label class="label-center">Name on Card </label>
+                    <div class="input-icon">
+                      <div>
+                        <span class="fa fa-credit-card"></span>
+                      </div>
+                      <input formcontrolname="name_card" name="NameOnCard" placeholder="Enter Name on Card" type="text" class="ng-pristine ng-invalid ng-touched">
+                      <span class="end-icon">
+                        <img src="https://alpha.corjl.com/cdn/images/icon/a93425/username.png">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-input">
+                    <label class="label-center">Credit Card # </label>
+                    <div class="input-icon">
+                      <div>
+                        <span class="fa fa-credit-card"></span>
+                      </div>
+                      <input formcontrolname="credit_card" name="credit" placeholder="Enter Credit Card Number" type="text" class="ng-untouched ng-pristine ng-invalid">
+                    </div>
+                  </div>
+                  <div class="flex-center">
+                    <div class="group-input" style="width: 300px;margin-right: 20px;">
+                      <label class="label-center" style="padding-left:20px">Expiration Date</label>
+                      <div class="input-icon">
+                        <div>
+                          <span class="fa fa-credit-card"></span>
+                        </div>
+                        <input formcontrolname="expiration_date" name="expiration_date" placeholder="mm/yy" type="text" class="ng-untouched ng-pristine ng-invalid">
+                      </div>
+                    </div>
+                    <div class="group-input">
+                      <label class="label-center">CVC Code</label>
+                      <div class="input-icon">
+                        <div>
+                          <span class="fa fa-credit-card"></span>
+                        </div>
+                        <input formcontrolname="cvc_code" name="cvc_code" placeholder="Enter CVC Code" type="text" class="ng-untouched ng-pristine ng-invalid">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <h3 class="title-content-modal">Subscription Plan</h3>
+              <div class="box-border">
+                <span class="cost-text ng-star-inserted" style="">Days remaining in free trial
+                  <span class="m-b-5">5</span>
+                </span>
+                <div class="center-two-title nospace m-b-10">
+                  <h5 class="ng-star-inserted">Monthly
+                    <span>$0.00</span>
+                  </h5>
+                  <h5>Per Order
+                    <span>$0.00</span>
+                  </h5>
+                </div>
+                <div class="group-input">
+                  <div class="input-icon">
+                    <div>
+                      <img alt="subscription plan" src="https://alpha.corjl.com/cdn/images/brand/426f3a/corjl_letter.png" width="22px">
+                    </div>
+                    <select class="select-arrow ng-untouched ng-pristine ng-valid" name="user_plan_id">
+                      <option value="15" class="ng-star-inserted">
+                        $9.99 Monthly Fee, $0.65 Per Order Fee
+                      </option>
+                      <option value="16" class="ng-star-inserted">
+                        $19.99 Monthly Fee, $0.45 Per Order Fee
+                      </option>
+                      <option value="17" class="ng-star-inserted">
+                        $49.99 Monthly Fee, $0.30 Per Order Fee
+                      </option>
+                      <option value="18" class="ng-star-inserted">
+                        $95.88 Yearly Fee, $0.65 Per Order Fee
+                      </option>
+                      <option value="19" class="ng-star-inserted">
+                        $191.88 Yearly Fee, $0.45 Per Order Fee
+                      </option>
+                      <option value="20" class="ng-star-inserted">
+                        $479.88 Yearly Fee, $0.30 Per Order Fee
+                      </option>
+                      <option value="Cancel Account">
+                        Cancel Account
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="group-input">
+                  <label class="label-center">Premium Features</label>
+                  <div class="input-icon">
+                    <div>
+                      <img alt="subscription plan" src="https://alpha.corjl.com/cdn/images/brand/426f3a/corjl_letter.png" width="22px">
+                    </div>
+                    <select class="select-arrow ng-untouched ng-pristine ng-valid" name="premium_feature_id">
+                      <option value="0">
+                        None
+                      </option>
+                      <option value="1" class="ng-star-inserted">
+                        $9.99 Monthly Creative Fabrica Fonts Package
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="group-input">
+                  <label class="label-center">Promo Code</label>
+                  <div class="input-icon">
+                    <div>
+                      <img alt="promo" src="https://alpha.corjl.com/cdn/images/icon/4a4f29/promo.png">
+                    </div>
+                    <input class="form-control ng-untouched ng-pristine ng-valid" name="promoCode" placeholder="Enter Promo Code" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn mat-primary" href="#">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Account Settings -->
+  <div class="modal fade" id="account-settings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Account Settings</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="content-dialog">
+            <div>
+              <form novalidate="" class="ng-pristine ng-invalid ng-touched">
+                <h3 class="title-content-modal">Change Password</h3>
+                <div class="box-border">
+                  <div class="group-input">
+                    <label class="label-center">Current Password </label>
+                    <div class="input-icon two">
+                      <div>
+                        <span class="fa fa-lock"></span>
+                      </div>
+                      <input formcontrolname="cur_password" name="CurrentPassword" placeholder="Enter Current Password" type="password" class="ng-pristine ng-invalid ng-touched">
+                      <span class="end-icon">
+                        <img src="https://alpha.corjl.com/cdn/images/icon/ea344d/type-text.png">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-input">
+                    <label class="label-center">New Password </label>
+                    <div class="input-icon two">
+                      <div>
+                        <span class="fa fa-lock"></span>
+                      </div>
+                      <input formcontrolname="password" name="NewPassword" placeholder="Enter New Password" type="password" class="ng-untouched ng-pristine ng-invalid">
+                      <span class="end-icon">
+                        <img src="https://alpha.corjl.com/cdn/images/icon/4700e0/password.png">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-input">
+                    <label class="label-center">Confirm New Password </label>
+                    <div class="input-icon two">
+                      <div>
+                        <span class="fa fa-lock"></span>
+                      </div>
+                      <input formcontrolname="c_password" name="CNewPassword" placeholder="Confirm New Password" type="password" class="ng-untouched ng-pristine ng-invalid">
+                      <span class="end-icon">
+                        <img src="https://alpha.corjl.com/cdn/images/icon/4700e0/password.png">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="title-content-modal">Change Etsy Shop</h3>
+                <div class="box-border">
+                  <div class="space-text-text-button">
+                    <div class="text-text-button-inline">
+                      <strong>Etsy Shop:</strong>
+                      <span>HeatherTests</span>
+                      <button class="btn mat-primary btn-sm" type="button" data-dismiss="modal">CHANGE</button>
+                    </div>
+                    <div class="small-note">
+                      <small>* Login to Esty with the account you wish to switch to and click Change</small>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn mat-primary" href="#">Save</a>
         </div>
       </div>
     </div>
   </div>
   
-  <!-- Modal-->
-  <div class="modal fade" id="#" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Modal Design Settings -->
+  <div class="modal fade" id="design-settings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Design Settings</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body modal-welcome-content">Select "Logout" below if you are ready to end your current session.</div>
+
+        <div class="modal-body">
+          <div class="content-dialog">
+
+            <div>
+              <form novalidate="" class="ng-pristine ng-invalid ng-touched">
+                <h3 class="title-content-modal">New Design Default Settings</h3>
+                <div class="box-border">
+                  <h4>Upon Customer Completion</h4>
+                  
+                  <div class="group-input-small mt-3">
+                    <div class="form-check">
+                      <label class="custom-control fill-checkbox">
+                        <input type="checkbox" class="fill-control-input">
+                        <span class="fill-control-indicator"></span>
+                        <span class="fill-control-description">Customer Prints Design</span>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div class="ml-5"> 
+                    <div class="group-input-small d-inline-block mr-3">
+                      <div class="form-check">
+                        <label class="custom-control fill-checkbox">
+                          <input type="checkbox" class="fill-control-input">
+                          <span class="fill-control-indicator"></span>
+                          <span class="fill-control-description">PDF</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-input-small d-inline-block mr-3">
+                      <div class="form-check">
+                        <label class="custom-control fill-checkbox">
+                          <input type="checkbox" class="fill-control-input">
+                          <span class="fill-control-indicator"></span>
+                          <span class="fill-control-description">JPG</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-input-small d-inline-block mr-3">
+                      <div class="form-check">
+                        <label class="custom-control fill-checkbox">
+                          <input type="checkbox" class="fill-control-input">
+                          <span class="fill-control-indicator"></span>
+                          <span class="fill-control-description">PNG</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="group-input-small">
+                    <div class="form-check">
+                      <label class="custom-control fill-checkbox">
+                        <input type="checkbox" class="fill-control-input">
+                        <span class="fill-control-indicator"></span>
+                        <span class="fill-control-description">I Process The Order</span>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div class="group-input-small">
+                    <div class="form-check">
+                      <label class="custom-control fill-checkbox">
+                        <input type="checkbox" class="fill-control-input">
+                        <span class="fill-control-indicator"></span>
+                        <span class="fill-control-description">Allow Customer To Edit Design</span>
+                      </label>
+                    </div>
+                  </div>                                             
+<!--
+                  <div class="group-input-small">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1">
+                        Customer Can Add Artboards
+                      </label>
+                    </div>
+                  </div>
+-->
+                  <hr>
+                  <div class="group-input-small mt-3">
+                    <div class="form-check">
+                      <label class="custom-control fill-checkbox">
+                        <input type="checkbox" class="fill-control-input">
+                        <span class="fill-control-indicator"></span>
+                        <span class="fill-control-description">Show Bleed</span>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div class="group-input-small">
+                    <div class="form-check">
+                      <label class="custom-control fill-checkbox">
+                        <input type="checkbox" class="fill-control-input">
+                        <span class="fill-control-indicator"></span>
+                        <span class="fill-control-description">Customer Can Add Artboards</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="group-input-small">
+                    <div class="input-name-inline">
+                      <span class="text-order-expires">Order Expires:</span>
+                      <select class="select-arrow ng-untouched ng-pristine ng-valid" style="width: 77%; height: 34px;">
+                        <!---->
+                        <option value="0" class="ng-star-inserted" style="">
+                          Never
+                        </option>
+                        <option value="1" class="ng-star-inserted" style="">
+                          1 Day
+                        </option>
+                        <option value="3" class="ng-star-inserted" style="">
+                          3 Days
+                        </option>
+                        <option value="7" class="ng-star-inserted" style="">
+                          7 Days
+                        </option>
+                        <option value="14" class="ng-star-inserted" style="">
+                          14 Days
+                        </option>
+                        <option value="30" class="ng-star-inserted" style="">
+                          30 Days
+                        </option>
+                        <option value="60" class="ng-star-inserted" style="">
+                          60 Days
+                        </option>
+                        <option value="90" class="ng-star-inserted" style="">
+                          90 Days
+                        </option>
+                        <option value="180" class="ng-star-inserted" style="">
+                          180 Days
+                        </option>
+                        <option value="365" class="ng-star-inserted" style="">
+                          365 Days
+                        </option>
+                      </select>
+
+                    </div>
+                  </div>
+
+                  <div class="group-input-small">
+                    <div class="input-name-inline">
+                      <span class="nowrap">Max Downloads:</span>
+                      <select class="select-arrow ng-untouched ng-pristine ng-valid" style="width: 80%; height: 34px;">
+                        <!---->
+                        <option value="0" class="ng-star-inserted" style="">
+                          Unlimited
+                        </option>
+                        <option value="1" class="ng-star-inserted" style="">
+                          1
+                        </option>
+                        <option value="2" class="ng-star-inserted" style="">
+                          2
+                        </option>
+                        <option value="3" class="ng-star-inserted" style="">
+                          3
+                        </option>
+                        <option value="4" class="ng-star-inserted" style="">
+                          4
+                        </option>
+                        <option value="5" class="ng-star-inserted" style="">
+                          5
+                        </option>
+                        <option value="6" class="ng-star-inserted" style="">
+                          6
+                        </option>
+                        <option value="7" class="ng-star-inserted" style="">
+                          7
+                        </option>
+                        <option value="8" class="ng-star-inserted" style="">
+                          8
+                        </option>
+                        <option value="9" class="ng-star-inserted" style="">
+                          9
+                        </option>
+                        <option value="10" class="ng-star-inserted" style="">
+                          10
+                        </option>
+                      </select>
+
+                    </div>
+                  </div>
+                  
+                  <div class="group-input-small">
+                    <div class="input-name-inline">
+                      <span class="nowrap">Instructions:</span>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="width: 77%; height: 60px;"></textarea>
+
+                    </div>
+                  </div>
+
+                </div>
+                
+                <h3 class="title-content-modal">Demo Settings</h3>
+                <div class="box-border">
+                  <div class="group-input-small mt-3">
+                    <div class="form-check">
+                      <label class="custom-control fill-checkbox">
+                        <input type="checkbox" class="fill-control-input">
+                        <span class="fill-control-indicator"></span>
+                        <span class="fill-control-description">Show Watermark</span>
+                      </label>
+                    </div>
+                  </div>         
+                  <div class="group-input-small">
+                    <div class="form-check">
+                      <label class="custom-control fill-checkbox">
+                        <input type="checkbox" class="fill-control-input">
+                        <span class="fill-control-indicator"></span>
+                        <span class="fill-control-description">Use Custom Watermark</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn mat-primary" href="#">Logout</a>
+          <a class="btn mat-primary" href="#">Save</a>
         </div>
       </div>
     </div>
