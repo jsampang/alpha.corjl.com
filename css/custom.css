@@ -37,6 +37,14 @@ body {
   position: relative;
 }
 
+.btn-name-img:active img, .btn-name-img:focus img, .btn-name-img:hover img {
+    display: none!important;
+}
+
+.btn-name-img:active img.hover-upload, .btn-name-img:active > img.hover-cart, .btn-name-img:focus img.hover-upload, .btn-name-img:focus > img.hover-cart, .btn-name-img:hover img.hover-upload, .btn-name-img:hover > img.hover-cart {
+    display: block!important;
+}
+
 .btn-name-img:active,
 .btn-name-img:focus,
 .btn-name-img:hover {
