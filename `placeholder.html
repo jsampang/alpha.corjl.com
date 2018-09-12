@@ -1,58 +1,174 @@
-<nav class="navbar navbar-expand static-top mat-toolbar mat-accent mat-toolbar-single-row ">
-  <img src="https://alpha.corjl.com/cdn/images/header/f6fbb0/Corjl_Logo.png" alt="Corjl.com" height="44px">
-  <div class="customer-etsyid-header ng-tns-c1-0 ng-star-inserted">
-    <span class="ng-tns-c1-0">Etsy ID: </span>
-    <span class="ng-tns-c1-0 ng-star-inserted">629047054
-    </span>
-  </div>
-  <div class="d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-    <ul class="navbar-nav ml-auto ml-md-0">
-      <li>
-        <button class="btn-name-img" type="button">
-          <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">help_outline</mat-icon>
-          <span class="ng-tns-c1-0">Support</span>
-        </button>
-      </li>
-      <li>
-        <button class="btn-name-img" type="button">
-          <span class="icon far fa-file"></span>
-          <span class="new fa fa-plus"></span>
-          <span class="ng-tns-c1-0">New</span>
-        </button>
-      </li>
-      <li>
-        <button class="btn-name-img" type="button">
-          <span class="icon far fa-folder-open"></span>
-          <span class="ng-tns-c1-0">Open</span>
-        </button>
-      </li>
-      <li>
-        <button class="btn-name-img" type="button">
-          <img class="icon" src="https://alpha.corjl.com/cdn/images/icon/189871/cart.png">
-          <img class="icon hover-cart" src="https://alpha.corjl.com/cdn/images/icon/c66193/cart-hover.png">
-          <span class="ng-tns-c1-0">Orders</span>
-        </button>
-      </li>
-    </ul>
-  </div>
-  <div class="d-md-inline-block form-inline ">
-    <ul class="navbar-nav ml-auto ml-md-0">
-      <li class="nav-item dropdown no-arrow d-inline-block">
-        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="avatar">
-            <img class="ng-tns-c1-0" alt="avatar" src="https://www.etsy.com/images/avatars/default_avatar_75x75.png" width="45px">
-          </span>
-          <span class="user-header">Heather</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#design-settings">Design Settings</a>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#account-settings">Account Settings</a>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#billing-settings">Billing Settings</a>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#billing-history">Billing History</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logout">Logout</a>
+<mat-dialog-content class="mat-dialog-content">
+  <div class="modal-welcome-content relative">
+    
+    
+    <div class="panel-header wraper-order-action-top">
+      <div class="order-action-top">
+        <div class="input-with-button search-box">
+          <div class="relative">
+            <input class="form-control ng-pristine ng-valid ng-touched" name="search-text" style="min-width: 100px;" type="text">
+            <span class="fa fa-search icon">
+            </span>
+          </div>
+          <button class="small-button red mat-raised-button" mat-raised-button="" type="button"><span class="mat-button-wrapper">
+              Search
+            </span>
+            <div class="mat-button-ripple mat-ripple" matripple=""></div>
+            <div class="mat-button-focus-overlay"></div>
+          </button>
         </div>
-      </li>
-    </ul>
+        <div class="select-style">
+          <select class="full-width select-arrow ng-untouched ng-pristine ng-valid" name="order_selected" style="min-width: 70px;">
+            <option value="">All Order Statuses</option>
+            <option value="not_complete_or_canceled" class="ng-star-inserted" style="">Not Complete or Canceled</option>
+            <option value="not_opened" class="ng-star-inserted" style="">Not Opened</option>
+            <option value="incomplete" class="ng-star-inserted" style="">Incomplete</option>
+            <option value="partially_complete" class="ng-star-inserted" style="">Partially Complete</option>
+            <option value="partially_ready_to_process" class="ng-star-inserted" style="">Partially Ready to Process</option>
+            <option value="ready_to_process" class="ng-star-inserted" style="">Ready to Process</option>
+            <option value="complete" class="ng-star-inserted" style="">Complete</option>
+            <option value="canceled" class="ng-star-inserted" style="">Canceled</option>
+            <option value="email_not_sent" class="ng-star-inserted" style="">Email Not Sent</option>
+          </select>
+        </div>
+        <div class="box-date-picker">
+          <input id="datepicker" width="276" />
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+<!--
+          <my-date-range-picker name="date" class="ng-untouched ng-pristine ng-valid">
+            <div class="mydrp" style="width: 262px;">
+              <div class="selectiongroup ng-star-inserted" style=""><input autocomplete="off" autocorrect="off" class="selection ng-untouched ng-pristine ng-valid" spellcheck="false" type="text" aria-label="Date range input field" maxlength="23" placeholder="" style="height: 34px; font-size: 14px;"> <span class="selbtngroup" style="height: 34px;">
+                  <button class="btnclear btnclearenabled ng-star-inserted" type="button" aria-label="Clear date range"><span class="mydrpicon icon-mydrpremove"></span></button> <button class="btnpicker btnpickerenabled" type="button" aria-label="Open Calendar"><span class="mydrpicon icon-mydrpcalendar"></span></button></span></div>
+            </div>
+          </my-date-range-picker>
+-->
+        </div>
+      </div>
+      <div class="full-width-mobile ng-star-inserted" style="">
+        <button class="small-button red button-form-mobile mat-raised-button" mat-raised-button="" type="button"><span class="mat-button-wrapper">
+            CREATE NEW ORDER
+          </span>
+          <div class="mat-button-ripple mat-ripple" matripple=""></div>
+          <div class="mat-button-focus-overlay"></div>
+        </button>
+      </div>
+    </div>
+    
+    
+    <div class="wrapper-orders-modal">
+      <div class="relative">
+        <p-datatable expandablerows="true" tablestyleclass="theme1-table-prime vertical-align-top custom-thead no-padding-expand">
+          <div class="ui-datatable ui-widget">
+            <div class="ui-datatable-tablewrapper ng-star-inserted" style="">
+              <table class="theme1-table-prime vertical-align-top custom-thead no-padding-expand">
+                <thead class="ui-datatable-thead">
+                  <tr class="ui-state-default ng-star-inserted">
+                    <th class="icon-area ui-state-default ui-unselectable-text ng-star-inserted" scope="col">
+                      <span class="ui-column-title ng-star-inserted"></span>
+                    </th>
+                    <th class="date-time ui-state-default ui-unselectable-text ui-sortable-column ui-state-active ng-star-inserted" tabindex="1" scope="col">
+                      <span class="ui-column-title ng-star-inserted">Date Ordered</span>
+                      <span class="ui-sortable-column-icon fa fa-fw fa-sort fa-sort-desc ng-star-inserted"></span>
+                    </th>
+                    <th class="email normal-text can-copy ui-state-default ui-unselectable-text ui-sortable-column ng-star-inserted" tabindex="1" scope="col">
+                      <span class="ui-column-title ng-star-inserted">Buyer Email</span>
+                      <span class="ui-sortable-column-icon fa fa-fw fa-sort ng-star-inserted"></span>
+                    </th>
+                    <th class="username normal-text can-copy ui-state-default ui-unselectable-text ui-sortable-column ng-star-inserted" tabindex="1" scope="col">
+                      <span class="ui-column-title ng-star-inserted">Buyer Username</span>
+                      <span class="ui-sortable-column-icon fa fa-fw fa-sort ng-star-inserted"></span>
+                    </th>
+                    <th class="order-id can-copy ui-state-default ui-unselectable-text ui-sortable-column ng-star-inserted" tabindex="1" scope="col">
+                      <span class="ui-column-title ng-star-inserted">Order Id</span>
+                      <span class="ui-sortable-column-icon fa fa-fw fa-sort ng-star-inserted"></span>
+                    </th>
+                    <th class="status can-copy ui-state-default ui-unselectable-text ui-sortable-column ng-star-inserted" tabindex="1" scope="col">
+                      <span class="ui-column-title ng-star-inserted">Status</span>
+                      <span class="ui-sortable-column-icon fa fa-fw fa-sort ng-star-inserted"></span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="ui-datatable-data ui-widget-content">
+                  <tr class="ui-datatable-even ui-widget-content ng-star-inserted" style="">
+                    <td class="icon-area ng-star-inserted">
+                      <a href="#" class="ng-star-inserted">
+                        <span class="ui-row-toggler fa fa-fw ui-clickable fa-chevron-circle-right"></span>
+                      </a>
+                    </td>
+                    <td class="date-time ng-star-inserted">
+                      <span class="ui-cell-data ng-star-inserted">Sep 10, 2018 3:00pm ET</span>
+                    </td>
+                    <td class="email normal-text can-copy ng-star-inserted">
+                      <span class="ui-cell-data ng-star-inserted">heathermkcampbell@gmail.com</span>
+                    </td>
+                    <td class="username normal-text can-copy ng-star-inserted">
+                      <span class="ui-cell-data ng-star-inserted">HeatherMKCampbell</span>
+                    </td>
+                    <td class="order-id can-copy ng-star-inserted">
+                      <span class="ui-cell-data ng-star-inserted">1349617344</span>
+                    </td>
+                    <td class="status can-copy ng-star-inserted">
+                      <span class="ui-cell-data ng-star-inserted">
+                        <span class="ng-star-inserted">Complete</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="ui-datatable-odd ui-widget-content ng-star-inserted" style="">
+                    <td class="icon-area ng-star-inserted">
+                      <a href="#" class="ng-star-inserted">
+                        <span class="ui-row-toggler fa fa-fw ui-clickable fa-chevron-circle-right"></span>
+                      </a>
+                    </td>
+                    <td class="date-time ng-star-inserted">
+                      <span class="ui-cell-data ng-star-inserted">Sep 10, 2018 2:53pm ET</span>
+                    </td>
+                    <td class="email normal-text can-copy ng-star-inserted">
+                      <span class="ui-cell-data ng-star-inserted">heathermkcampbell@gmail.com</span>
+                    </td>
+                    <td class="username normal-text can-copy ng-star-inserted">
+                      <span class="ui-cell-data ng-star-inserted">heathermkcampbell@gmail.com</span>
+                    </td>
+                    <td class="order-id can-copy ng-star-inserted">
+                      <span class="ui-cell-data ng-star-inserted">CJ877026</span>
+                    </td>
+                    <td class="status can-copy ng-star-inserted">
+                      <span class="ui-cell-data ng-star-inserted">
+                        <span class="ng-star-inserted">Complete</span>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p-paginator styleclass="ui-paginator-bottom" class="ng-star-inserted" style="">
+              <div class="ui-paginator-bottom ui-paginator ui-widget ui-widget-header ui-unselectable-text ui-helper-clearfix ng-star-inserted">
+                <a class="ui-paginator-first ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                  <span class="fa fa-step-backward"></span>
+                </a>
+                <a class="ui-paginator-prev ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                  <span class="fa fa-backward"></span>
+                </a>
+                <span class="ui-paginator-pages">
+                  <a class="ui-paginator-page ui-paginator-element ui-state-default ui-corner-all ui-state-active ng-star-inserted" href="#">1</a>
+                </span>
+                <a class="ui-paginator-next ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                  <span class="fa fa-forward"></span>
+                </a>
+                <a class="ui-paginator-last ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                  <span class="fa fa-step-forward"></span>
+                </a>
+              </div>
+            </p-paginator>
+            <div class="ui-column-resizer-helper ui-state-highlight" style="display:none"></div>
+            <span class="fa fa-arrow-down ui-datatable-reorder-indicator-up" style="position: absolute; display: none;"></span>
+            <span class="fa fa-arrow-up ui-datatable-reorder-indicator-down" style="position: absolute; display: none;"></span>
+          </div>
+        </p-datatable>
+      </div>
+    </div>
   </div>
-</nav>
+</mat-dialog-content>

@@ -266,3 +266,79 @@ label {
 .form-check {
     padding-left: 0px!important;
 }
+
+@media (min-width: 576px) {
+  .modal-dialog-wide {
+    margin: 1.75rem auto;
+    max-width: 80vw;
+    width: 1100px;
+  }
+}
+
+.panel-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.icon-area {
+    width: 50px;
+}
+
+.date-time {
+    width: 190px;
+}
+
+.email, .username {
+    width: 230px;
+}
+
+.order-id {
+    width: 120px;
+}
+
+.status {
+    width: 100px;
+}
+
+.ui-datatable .custom-thead .ui-datatable-thead>tr>th {
+    font-weight: bolder!important;
+}
+
+.ui-datatable-tablewrapper {
+    border: 1px solid #dedede;
+}
+
+.order-action-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.select-style {
+    margin-left: 20px;
+}
+
+.box-date-picker {
+    height: 32px!important;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+input[placeholder], input[type=date], input[type=email], input[type=number], input[type=password], input[type=range], input[type=text], select{
+    
+    height: 35px!important;
+
+}
+
+a.red, button.red {
+    background-color: #65d1c4;
+    color: #fff;
+    height: 35px;
+}
