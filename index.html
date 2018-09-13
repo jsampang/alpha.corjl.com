@@ -8,19 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="https://cdn.corjl.com/Assets/c8b704/favicon.png?v=2">
   <meta name="csrf-token" content="PkxfTtBvpPX7jJlegjWXuPmGs5vhXEgmZdCgDECo">
-
   <title>Alpha Corjl.com</title>
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://www.corjl.com/scripts/dist-frontend/styles.d0d2ca949289cf1776da.bundle.css?v=39" rel="stylesheet">
-
   <link href="css/custom.css" rel="stylesheet">
-  
-  
-  
-    <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -53,14 +47,14 @@
         </li>
 
         <li>
-          <button class="btn-name-img" type="button">
+          <button class="btn-name-img" type="button" data-toggle="modal" data-target="#open">
             <span class="icon far fa-folder-open"></span>
             <span class="ng-tns-c1-0">Open</span>
           </button>
         </li>
 
         <li>
-          <button class="btn-name-img" type="button" data-toggle="modal" data-target="#orders">
+          <button class="btn-name-img" type="button" data-toggle="modal" data-target="#order">
             <img class="icon" src="https://alpha.corjl.com/cdn/images/icon/189871/cart.png">
             <img class="icon hover-cart" src="https://alpha.corjl.com/cdn/images/icon/c66193/cart-hover.png">
             <span class="ng-tns-c1-0">Orders</span>
@@ -668,7 +662,7 @@
   </div>
   
   <!-- Modal Orders -->
-  <div class="modal fade" id="orders" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
+  <div class="modal fade" id="order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
     <div class="modal-dialog modal-dialog-wide" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -1054,8 +1048,107 @@
           
         </div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#orders" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#order" data-dismiss="modal">Cancel</button>
           <a class="btn mat-primary" href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Open -->
+  <div class="modal fade" id="open" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
+    <div class="modal-dialog modal-dialog-wide" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Open Existing Design</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          
+          <div class="panel-header wraper-order-action-top">
+            <div class="order-action-top">    
+              <div class="input-with-button search-box">
+                <div class="relative">
+                  <input class="form-control ng-pristine ng-valid ng-touched" name="search-text" style="min-width: 100px;" type="text">
+                  <span class="fa fa-search icon">
+                  </span>
+                </div>
+                <button class="small-button red mat-raised-button" mat-raised-button="" type="button"><span class="mat-button-wrapper">
+                    Search
+                  </span>
+                  <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                  <div class="mat-button-focus-overlay"></div>
+                </button>
+              </div>
+              <div class="box-tag with-arrow">
+                <span>Tag</span>
+                <div>
+                  <input type="text" class="form-control form-control-tag" id="" aria-describedby="" placeholder="Begin typing to add a tag">
+                </div>
+              </div>    
+              <div class="grid-and-list">
+                <button mat-icon-button="" class="mat-icon-button active"><span class="mat-button-wrapper">
+                    <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">view_module</mat-icon>
+                  </span>
+                  <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                  <div class="mat-button-focus-overlay"></div>
+                </button>
+                <button class="nav-link mat-icon-button" mat-icon-button=""><span class="mat-button-wrapper">
+                    <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">view_list</mat-icon>
+                  </span>
+                  <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                  <div class="mat-button-focus-overlay"></div>
+                </button>
+              </div>
+              <div class="space-panigator">
+                <p-paginator>
+                  <div class="ui-paginator ui-widget ui-widget-header ui-unselectable-text ui-helper-clearfix ng-star-inserted" style="">
+                    <a class="ui-paginator-first ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                      <span class="fa fa-step-backward"></span>
+                    </a>
+                    <a class="ui-paginator-prev ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                      <span class="fa fa-backward"></span>
+                    </a>
+                    <span class="ui-paginator-pages">
+                      <a class="ui-paginator-page ui-paginator-element ui-state-default ui-corner-all ui-state-active ng-star-inserted" href="#">1</a>
+                    </span>
+                    <a class="ui-paginator-next ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                      <span class="fa fa-forward"></span>
+                    </a>
+                    <a class="ui-paginator-last ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                      <span class="fa fa-step-forward"></span>
+                    </a>
+                  </div>
+                </p-paginator>
+              </div>         
+            </div>
+          </div>
+          
+          <div class="panel-header mt-3">    
+            <div class="wrapper-file-existing-item">
+              <button class="file-existing-item ng-star-inserted" type="button" title="HeatherTests" style="">
+                <div class="box-image">
+                  <img src="https://cdn.corjl.com/designer/design-thumb/20810/1536605962.jpg" alt="HeatherTests">
+                </div>
+                <h4>HeatherTests</h4>
+                <p>
+                  <span>5x7 in</span>
+                  <span>Last updated: 09/10/2018</span>
+                  <span>Tags:
+                  </span>
+                </p>
+              </button>
+            </div>      
+          </div>
+             
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn mat-primary" href="#">Open</a>
         </div>
       </div>
     </div>
