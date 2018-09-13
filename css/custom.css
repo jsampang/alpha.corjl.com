@@ -275,6 +275,15 @@ label {
   }
 }
 
+@media (min-width: 576px) {
+  .modal-dialog-medium {
+    max-width: 80vw;
+    pointer-events: auto;
+    width: 870px;
+    position: static;
+  }
+}
+
 .panel-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -544,4 +553,40 @@ a.red, button.red {
 .panel-header p {
     font-size: 13px;
     font-style: italic;
+}
+
+.box:first-child {
+    padding-right: 20px;
+}
+
+.box {
+    border: 1px solid #dcdcdc;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.design-name-and-tag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.design-name-and-tag .input-name-inline:first-child {
+    margin-right: 20px;
+}
+
+.input-name-inline {
+    margin-bottom: 10px;
+}
+.input-name-inline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }

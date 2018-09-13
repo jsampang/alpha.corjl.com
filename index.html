@@ -39,7 +39,7 @@
         </li>
 
         <li>
-          <button class="btn-name-img" type="button">
+          <button class="btn-name-img" type="button" data-toggle="modal" data-target="#create-new">
             <span class="icon far fa-file"></span>
             <span class="new fa fa-plus"></span>
             <span class="ng-tns-c1-0">New</span>
@@ -47,7 +47,7 @@
         </li>
 
         <li>
-          <button class="btn-name-img" type="button" data-toggle="modal" data-target="#open">
+          <button class="btn-name-img" type="button" data-toggle="modal" data-target="#open-file">
             <span class="icon far fa-folder-open"></span>
             <span class="ng-tns-c1-0">Open</span>
           </button>
@@ -1055,8 +1055,8 @@
     </div>
   </div>
   
-  <!-- Modal Open -->
-  <div class="modal fade" id="open" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
+  <!-- Modal Open File -->
+  <div class="modal fade" id="open-file" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
     <div class="modal-dialog modal-dialog-wide" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -1143,6 +1143,150 @@
               </button>
             </div>      
           </div>
+             
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn mat-primary" href="#">Open</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Create New Design -->
+  <div class="modal fade" id="create-new" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
+    <div class="modal-dialog modal-dialog-medium" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create New design</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          
+          <div class="content-dialog">
+            <form novalidate="" class="ng-pristine ng-invalid ng-touched">
+              
+              <div class="box">
+                <div class="design-name-and-tag">
+                  <div class="input-name-inline">
+                    <span for="" style="min-width: 118px">Design Name:</span>
+                    <input formcontrolname="id" hidden="" type="text" class="ng-untouched ng-pristine ng-valid">
+                    <input formcontrolname="name" style="min-width: 248px" type="text" class="ng-pristine ng-invalid ng-touched">
+                  </div>
+                  <div class="input-name-inline">
+                    <span for="" style="min-width: 26px;">Tags:</span>
+                    <input formcontrolname="id" hidden="" type="text" class="ng-untouched ng-pristine ng-valid">
+                    <input formcontrolname="name" style="min-width: 355px" type="text" class="ng-pristine ng-invalid ng-touched" placeholder="Begin typing to add a tag">
+                  </div>
+<!--
+                  <div class="input-name-inline full-width">
+                    <span class="initial" for="">Tags:</span>
+                    <div>
+                  <input type="text" class="form-control form-control-tag" id="" aria-describedby="" placeholder="Begin typing to add a tag">
+                </div>
+                  </div>
+-->
+                </div>
+
+<!--
+                <div class="box-tag with-arrow">
+                  <div class="input-name-inline">
+                    <span>Load Page Setting:</span>
+                    <select class="select-arrow width-loading-page-setting ng-untouched ng-pristine ng-valid" formcontrolname="load_page_setting" name="category">
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+-->
+              </div>
+
+
+
+
+            </form>
+          </div>
+          
+<!--
+          <div class="panel-header wraper-order-action-top">
+            <div class="order-action-top">    
+              <div class="input-with-button search-box">
+                <div class="relative">
+                  <input class="form-control ng-pristine ng-valid ng-touched" name="search-text" style="min-width: 100px;" type="text">
+                  <span class="fa fa-search icon">
+                  </span>
+                </div>
+                <button class="small-button red mat-raised-button" mat-raised-button="" type="button"><span class="mat-button-wrapper">
+                    Search
+                  </span>
+                  <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                  <div class="mat-button-focus-overlay"></div>
+                </button>
+              </div>
+              <div class="box-tag with-arrow">
+                <span>Tag</span>
+                <div>
+                  <input type="text" class="form-control form-control-tag" id="" aria-describedby="" placeholder="Begin typing to add a tag">
+                </div>
+              </div>    
+              <div class="grid-and-list">
+                <button mat-icon-button="" class="mat-icon-button active"><span class="mat-button-wrapper">
+                    <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">view_module</mat-icon>
+                  </span>
+                  <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                  <div class="mat-button-focus-overlay"></div>
+                </button>
+                <button class="nav-link mat-icon-button" mat-icon-button=""><span class="mat-button-wrapper">
+                    <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">view_list</mat-icon>
+                  </span>
+                  <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                  <div class="mat-button-focus-overlay"></div>
+                </button>
+              </div>
+              <div class="space-panigator">
+                <p-paginator>
+                  <div class="ui-paginator ui-widget ui-widget-header ui-unselectable-text ui-helper-clearfix ng-star-inserted" style="">
+                    <a class="ui-paginator-first ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                      <span class="fa fa-step-backward"></span>
+                    </a>
+                    <a class="ui-paginator-prev ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                      <span class="fa fa-backward"></span>
+                    </a>
+                    <span class="ui-paginator-pages">
+                      <a class="ui-paginator-page ui-paginator-element ui-state-default ui-corner-all ui-state-active ng-star-inserted" href="#">1</a>
+                    </span>
+                    <a class="ui-paginator-next ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                      <span class="fa fa-forward"></span>
+                    </a>
+                    <a class="ui-paginator-last ui-paginator-element ui-state-default ui-corner-all ui-state-disabled" href="#" tabindex="-1">
+                      <span class="fa fa-step-forward"></span>
+                    </a>
+                  </div>
+                </p-paginator>
+              </div>         
+            </div>
+          </div>
+          
+          <div class="panel-header mt-3">    
+            <div class="wrapper-file-existing-item">
+              <button class="file-existing-item ng-star-inserted" type="button" title="HeatherTests" style="">
+                <div class="box-image">
+                  <img src="https://cdn.corjl.com/designer/design-thumb/20810/1536605962.jpg" alt="HeatherTests">
+                </div>
+                <h4>HeatherTests</h4>
+                <p>
+                  <span>5x7 in</span>
+                  <span>Last updated: 09/10/2018</span>
+                  <span>Tags:
+                  </span>
+                </p>
+              </button>
+            </div>      
+          </div>
+-->
              
         </div>
 
