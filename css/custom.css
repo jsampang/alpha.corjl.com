@@ -342,3 +342,71 @@ a.red, button.red {
     color: #fff;
     height: 35px;
 }
+
+@media screen and (max-width: 1080px) {
+  .order-action-top {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .wraper-order-action-top {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .search-box {
+    width: 100%!important;
+  }
+}
+
+.search-box .relative {
+    width: 100%;
+}
+
+.datepicker {
+  width: 276px;
+}
+
+@media screen and (max-width: 699px) {
+  .select-style {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 699px) {
+
+  .box-date-picker {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100% !important;
+  }
+}
+
+.ui-datatable-thead {
+    background-color: #d2d6de!important;
+    font-size: 15px;
+    font-weight: 500!important;
+    margin: 0;
+}
+
+.add-item-action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.add-item-action select {
+    width: 100%;
+    margin-right: 20px;
+}

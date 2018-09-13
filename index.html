@@ -679,9 +679,12 @@
         </div>
 
         <div class="modal-body">
-          <mat-dialog-content class="mat-dialog-content">
+          <div class="mat-dialog-content">
             <div class="modal-welcome-content relative">
               
+
+
+
               <div class="panel-header wraper-order-action-top">
                 
                 <div class="order-action-top">
@@ -713,7 +716,7 @@
                     </select>
                   </div>
                   <div class="box-date-picker">
-                    <input id="datepicker" width="276" />
+                    <input id="datepicker" class="datepicker" />
     
 <!--
                     <my-date-range-picker name="date" class="ng-untouched ng-pristine ng-valid">
@@ -726,7 +729,7 @@
                   </div>
                 </div>                
                 <div class="full-width-mobile ng-star-inserted" style="">
-                  <button class="small-button red button-form-mobile mat-raised-button" mat-raised-button="" type="button"><span class="mat-button-wrapper">
+                  <button class="small-button red button-form-mobile mat-raised-button" mat-raised-button="" type="button" data-toggle="modal" data-target="#new-order" data-dismiss="modal"><span class="mat-button-wrapper">
                       CREATE NEW ORDER
                     </span>
                     <div class="mat-button-ripple mat-ripple" matripple=""></div>
@@ -735,7 +738,147 @@
                 </div>
                 
               </div>
+
+<!--
+<div class="row">
+  <div class="col-sm">
+    <div class="input-with-button search-box">
+      <div class="relative">
+        <input class="form-control ng-pristine ng-valid ng-touched" name="search-text" style="min-width: 100px;" type="text">
+        <span class="fa fa-search icon">
+        </span>
+      </div>
+      <button class="small-button red mat-raised-button" mat-raised-button="" type="button"><span class="mat-button-wrapper">
+          Search
+        </span>
+        <div class="mat-button-ripple mat-ripple" matripple=""></div>
+        <div class="mat-button-focus-overlay"></div>
+      </button>
+    </div>
+  </div>
+  <div class="col-sm">
+    <div class="select-style">
+                    <select class="full-width select-arrow ng-untouched ng-pristine ng-valid" name="order_selected" style="min-width: 70px;">
+                      <option value="">All Order Statuses</option>
+                      <option value="not_complete_or_canceled" class="ng-star-inserted" style="">Not Complete or Canceled</option>
+                      <option value="not_opened" class="ng-star-inserted" style="">Not Opened</option>
+                      <option value="incomplete" class="ng-star-inserted" style="">Incomplete</option>
+                      <option value="partially_complete" class="ng-star-inserted" style="">Partially Complete</option>
+                      <option value="partially_ready_to_process" class="ng-star-inserted" style="">Partially Ready to Process</option>
+                      <option value="ready_to_process" class="ng-star-inserted" style="">Ready to Process</option>
+                      <option value="complete" class="ng-star-inserted" style="">Complete</option>
+                      <option value="canceled" class="ng-star-inserted" style="">Canceled</option>
+                      <option value="email_not_sent" class="ng-star-inserted" style="">Email Not Sent</option>
+                    </select>
+                  </div>
+  </div>
+  <div class="col-sm">
+    <div class="box-date-picker">
+                    <input id="datepicker" width="276" />
+    
+                  </div>
+  
+  </div>
+  <div class="col-sm">
+  <div class="full-width-mobile ng-star-inserted" style="">
+                  <button class="small-button red button-form-mobile mat-raised-button" mat-raised-button="" type="button" data-toggle="modal" data-target="#new-order" data-dismiss="modal"><span class="mat-button-wrapper">
+                      CREATE NEW ORDER
+                    </span>
+                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+  </div>
+</div>
+-->
+
+<!--
+              <div class="d-flex justify-content-around mb-5">
+                <div class="input-with-button search-box">
+                    <div class="relative">
+                      <input class="form-control ng-pristine ng-valid ng-touched" name="search-text" style="min-width: 100px;" type="text">
+                      <span class="fa fa-search icon">
+                      </span>
+                    </div>
+                    <button class="small-button red mat-raised-button" mat-raised-button="" type="button"><span class="mat-button-wrapper">
+                        Search
+                      </span>
+                      <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                      <div class="mat-button-focus-overlay"></div>
+                    </button>
+                  </div>
+                <div class="select-style">
+                    <select class="full-width select-arrow ng-untouched ng-pristine ng-valid" name="order_selected" style="min-width: 70px;">
+                      <option value="">All Order Statuses</option>
+                      <option value="not_complete_or_canceled" class="ng-star-inserted" style="">Not Complete or Canceled</option>
+                      <option value="not_opened" class="ng-star-inserted" style="">Not Opened</option>
+                      <option value="incomplete" class="ng-star-inserted" style="">Incomplete</option>
+                      <option value="partially_complete" class="ng-star-inserted" style="">Partially Complete</option>
+                      <option value="partially_ready_to_process" class="ng-star-inserted" style="">Partially Ready to Process</option>
+                      <option value="ready_to_process" class="ng-star-inserted" style="">Ready to Process</option>
+                      <option value="complete" class="ng-star-inserted" style="">Complete</option>
+                      <option value="canceled" class="ng-star-inserted" style="">Canceled</option>
+                      <option value="email_not_sent" class="ng-star-inserted" style="">Email Not Sent</option>
+                    </select>
+                  </div>
+                <div class="box-date-picker">
+                    <input id="datepicker" width="276" />
+    
+                  </div>
+                <div class="full-width-mobile ng-star-inserted" style="">
+                  <button class="small-button red button-form-mobile mat-raised-button" mat-raised-button="" type="button" data-toggle="modal" data-target="#new-order" data-dismiss="modal"><span class="mat-button-wrapper">
+                      CREATE NEW ORDER
+                    </span>
+                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+              </div>
+-->
               
+              
+              <div class="table-responsive mt-3 ui-datatable-tablewrapper ng-star-inserted">
+                <table class="table table-hover table-striped">
+                  <thead class="ui-datatable-thead">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th>Date Ordered</th>
+                      <th>Buyer Email</th>
+                      <th>Buyer Username</th>
+                      <th>Order ID</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="icon-area ng-star-inserted">
+                        <a href="#" class="ng-star-inserted">
+                          <span class="ui-row-toggler fa fa-fw ui-clickable fa-chevron-circle-right"></span>
+                        </a>
+                      </td>
+                      <td>Sep 10, 2018 3:00pm ET</td>
+                      <td>heathermkcampbell@gmail.com</td>
+                      <td>HeatherMKCampbell</td>
+                      <td>1349617344</td>
+                      <td>Complete</td>
+                    </tr>
+                    <tr>
+                      <td class="icon-area ng-star-inserted">
+                        <a href="#" class="ng-star-inserted">
+                          <span class="ui-row-toggler fa fa-fw ui-clickable fa-chevron-circle-right"></span>
+                        </a>
+                      </td>
+                      <td>Sep 10, 2018 3:00pm ET</td>
+                      <td>heathermkcampbell@gmail.com</td>
+                      <td>HeatherMKCampbell</td>
+                      <td>1349617344</td>
+                      <td>Complete</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+<!--
               <div class="wrapper-orders-modal">
                 <div class="relative">
                   <p-datatable expandablerows="true" tablestyleclass="theme1-table-prime vertical-align-top custom-thead no-padding-expand">
@@ -847,12 +990,72 @@
                   </p-datatable>
                 </div>
               </div>
+-->
             </div>
-          </mat-dialog-content>
+          </div>
         </div>
 
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal New Order-->
+  <div class="modal fade" id="new-order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create New Order</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body modal-welcome-content">
+          
+          <div class="content-dialog">
+            <div class="space-border">
+              <div class="input-name-inline">
+                <label>
+                  <i>Customer Email:</i>
+                </label>
+                <input name="customer_email" placeholder="Enter Customer Email" type="text" class="ng-pristine ng-valid ng-touched" style="width: 390px;">
+              </div>
+              <div class="input-name-inline">
+                <div class="group-input-small mt-3">
+                  <div class="form-check">
+                    <label class="custom-control fill-checkbox">
+                      <input type="checkbox" class="fill-control-input" checked>
+                      <span class="fill-control-indicator"></span>
+                      <span class="fill-control-description">Send email</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="space-item">
+                <strong>Items Ordered</strong>
+                <div class="add-item-action">
+                  <select class="select-arrow ng-untouched ng-pristine ng-valid" name="designs_selected">
+                    <option value="20810" class="ng-star-inserted" style="">
+                      HeatherTests
+                      <span class="ng-star-inserted"> - 629047054</span>
+                    </option>
+                  </select>
+                  <button class="small-button red auto-left mat-raised-button" mat-raised-button="" type="button"><span class="mat-button-wrapper">Add Item</span>
+                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#orders" data-dismiss="modal">Cancel</button>
+          <a class="btn mat-primary" href="#">Logout</a>
         </div>
       </div>
     </div>
