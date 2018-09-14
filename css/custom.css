@@ -222,13 +222,14 @@ label {
     justify-content: space-between;
 }
 
-.input-name-inline > span {
+.input-name-inline span {
     display: inline-block;
     margin-right: 15px;
     min-width: 70px;
     text-align: right;
     color: #000;
     font-weight: 700;
+  font-style: italic;
 }
 
 
@@ -589,4 +590,211 @@ a.red, button.red {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+.chosse-artboard-title {
+    text-align: center;
+    padding: 0 10px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    left: calc(50% - 110px);
+    top: -16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.chosse-artboard-title span {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.chosse-artboard-title span:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    z-index: 10;
+    top: 12px;
+    width: 7px;
+    height: 7px;
+    background-color: #e3e3e3;
+    border-radius: 20px;
+}
+
+.chosse-artboard-title span:after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    z-index: 10;
+    top: 12px;
+    width: 7px;
+    height: 7px;
+    background-color: #e3e3e3;
+    border-radius: 20px;
+}
+
+/* boxes */
+
+.choose-a-page-layout ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.choose-a-page-layout ul button.active, 
+.choose-a-page-layout ul button:active, 
+.choose-a-page-layout ul button:focus {
+    -webkit-box-shadow: 0 0 9px #82d8ce;
+    box-shadow: 0 0 9px #82d8ce;
+}
+
+.choose-a-page-layout ul button {
+    width: 25%;
+    max-width: 25%;
+    color: #333;
+    padding: 5px 8px;
+    margin: 5px;
+}
+
+.choose-a-page-layout-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+}
+
+.layout-review {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 80%;
+    height: 140px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    pointer-events: none;
+}
+
+.layout-review-item {
+    background-color: #dfdfdf;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+.choose-a-page-layout-item h4 {
+    font-weight: 600;
+    margin: 10px 0 3px;
+    font-size: 14px!important;
+}
+
+.layout-custom-size {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.layout-custom-size span {
+    font-style: italic;
+}
+
+.layout-custom-size input {
+    width: 40px;
+    margin: 0 7px;
+}
+
+/* artboard */
+
+.box-select-artboard {
+    overflow: hidden;
+    position: relative;
+}
+
+.wrapper-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.item-design.selected, 
+.item-design:active, 
+.item-design:focus, 
+.item-design:hover {
+    -webkit-box-shadow: 0 0 9px #82d8ce;
+    box-shadow: 0 0 9px #82d8ce;
+}
+
+.item-design {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background: 0 0;
+    display: block;
+    float: left;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    -webkit-transition: .2s -webkit-box-shadow ease-in-out;
+    transition: .2s -webkit-box-shadow ease-in-out;
+    transition: .2s box-shadow ease-in-out;
+    transition: .2s box-shadow ease-in-out,.2s -webkit-box-shadow ease-in-out;
+}
+
+.select-template-name {
+    background-color: #757e83;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.setting-page-session {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.setting-page-session input {
+    width: 80px;
 }
